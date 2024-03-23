@@ -1,3 +1,4 @@
+#include "qtpch.h"
 #include "Application.h"
 
 #include "QuantumEngine/Events/AppEvent.h"

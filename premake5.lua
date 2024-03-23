@@ -20,6 +20,9 @@ project "QuantumEngine"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "qtpch.h"
+	pchsource "QuantumEngine/src/qtpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
@@ -28,6 +31,7 @@ project "QuantumEngine"
 
 	includedirs
 	{
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 

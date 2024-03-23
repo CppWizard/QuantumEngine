@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Quantum {
 
 	class QUANTUM_API KeyEvent : public Event

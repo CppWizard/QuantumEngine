@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Quantum {
 
 	class QUANTUM_API WindowResizeEvent : public Event
