@@ -1,3 +1,6 @@
 [submodule "QuantumEngine/vendor/spdlog"]
 	path = QuantumEngine/vendor/spdlog
 	url = https://github.com/gabime/spdlog.git
+[submodule "QuantumEngine/vendor/GLFW"]
+	path = QuantumEngine/vendor/GLFW
+	url = https://github.com/TheCherno/glfw.git
