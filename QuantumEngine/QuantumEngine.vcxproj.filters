@@ -40,6 +40,12 @@
     <ClInclude Include="src\QuantumEngine\Events\MouseEvent.h">
       <Filter>QuantumEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Layer.h">
+      <Filter>QuantumEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\LayerStack.h">
+      <Filter>QuantumEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Log.h">
       <Filter>QuantumEngine</Filter>
     </ClInclude>
@@ -53,6 +59,12 @@
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Application.cpp">
+      <Filter>QuantumEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Layer.cpp">
+      <Filter>QuantumEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\LayerStack.cpp">
       <Filter>QuantumEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Log.cpp">

@@ -85,6 +85,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -112,6 +113,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -140,6 +142,7 @@
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -164,6 +167,8 @@
     <ClInclude Include="src\QuantumEngine\Events\Event.h" />
     <ClInclude Include="src\QuantumEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\QuantumEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\QuantumEngine\Layer.h" />
+    <ClInclude Include="src\QuantumEngine\LayerStack.h" />
     <ClInclude Include="src\QuantumEngine\Log.h" />
     <ClInclude Include="src\QuantumEngine\Window.h" />
     <ClInclude Include="src\qtpch.h" />
@@ -171,6 +176,8 @@
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\QuantumEngine\Application.cpp" />
+    <ClCompile Include="src\QuantumEngine\Layer.cpp" />
+    <ClCompile Include="src\QuantumEngine\LayerStack.cpp" />
     <ClCompile Include="src\QuantumEngine\Log.cpp" />
     <ClCompile Include="src\qtpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

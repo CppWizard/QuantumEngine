@@ -1,11 +1,30 @@
 #include <Quantum.h>
 
+class ExampleLayer : public Quantum::Layer
+{
+public:
+	ExampleLayer()
+		: Layer("Example")
+	{
+	}
+
+	void OnUpdate() override
+	{
+		QT_INFO("ExampleLayer::Update");
+	}
+
+	void OnEvent(Quantum::Event& event) override
+	{
+		QT_TRACE("{0}", event);
+	}
+};
+
 class Sandbox : public Quantum::Application
 {
 public:
 	Sandbox()
 	{
-
+		PushLayer(new ExampleLayer());
 	}
 
 	~Sandbox()
