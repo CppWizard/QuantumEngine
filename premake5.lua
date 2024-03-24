@@ -15,8 +15,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "QuantumEngine/vendor/GLFW/include"
+IncludeDir["Glad"] = "QuantumEngine/vendor/Glad/include"
 
 include "QuantumEngine/vendor/GLFW"
+include "QuantumEngine/vendor/Glad"
 
 project "QuantumEngine"
 	location "QuantumEngine"
@@ -39,12 +41,14 @@ project "QuantumEngine"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 
@@ -56,7 +60,8 @@ project "QuantumEngine"
 		defines
 		{
 			"QT_PLATFORM_WINDOWS",
-			"QT_BUILD_DLL"
+			"QT_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 	postbuildcommands
