@@ -4,3 +4,6 @@
 [submodule "QuantumEngine/vendor/GLFW"]
 	path = QuantumEngine/vendor/GLFW
 	url = https://github.com/TheCherno/glfw.git
+[submodule "QuantumEngine/vendor/imgui"]
+	path = QuantumEngine/vendor/imgui
+	url = https://github.com/TheCherno/imgui.git

@@ -16,9 +16,11 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "QuantumEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "QuantumEngine/vendor/Glad/include"
+IncludeDir["ImGui"] = "QuantumEngine/vendor/imgui"
 
 include "QuantumEngine/vendor/GLFW"
 include "QuantumEngine/vendor/Glad"
+include "QuantumEngine/vendor/imgui"
 
 project "QuantumEngine"
 	location "QuantumEngine"
@@ -42,13 +44,15 @@ project "QuantumEngine"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}"
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links
 	{
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 

@@ -53,6 +53,8 @@
       <Filter>QuantumEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\qtpch.h" />
+    <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
@@ -71,5 +73,7 @@
       <Filter>QuantumEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\qtpch.cpp" />
+    <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp" />
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
