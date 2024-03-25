@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="QuantumEngine">
+      <UniqueIdentifier>{A62EEC5F-12EF-6796-DB29-B11347A9AC72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="QuantumEngine\vendor">
+      <UniqueIdentifier>{430EF001-2F9D-79CB-D8BB-8DC6C4298A71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\SandboxApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\QuantumEngine\vendor\glm">
+      <Filter>QuantumEngine\vendor</Filter>
+    </None>
+  </ItemGroup>
+</Project>
