@@ -10,6 +10,10 @@
 #error QUANTUMENGINE only supports Windows!
 #endif
 
+#ifdef QT_DEBUG
+	#define QT_ENABLE_ASSERTS
+#endif
+
 #ifdef QT_ENABLE_ASSERTS
 #define QT_ASSERT(x, ...) { if(!(x)) { QT_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 #define QT_CORE_ASSERT(x, ...) { if(!(x)) { QT_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

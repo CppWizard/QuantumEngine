@@ -19,14 +19,18 @@ IncludeDir["GLFW"] = "QuantumEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "QuantumEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "QuantumEngine/vendor/imgui"
 
-include "QuantumEngine/vendor/GLFW"
-include "QuantumEngine/vendor/Glad"
-include "QuantumEngine/vendor/imgui"
+group "Dependencies"
+	include "QuantumEngine/vendor/GLFW"
+	include "QuantumEngine/vendor/Glad"
+	include "QuantumEngine/vendor/imgui"
+
+group ""
 
 project "QuantumEngine"
 	location "QuantumEngine"
 	kind "SharedLib"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -59,7 +63,6 @@ project "QuantumEngine"
 
 	filter "system:windows"
 		cppdialect "C++20"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -76,23 +79,24 @@ project "QuantumEngine"
 
 	filter "configurations:Debug"
 		defines "QT_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "QT_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "QT_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 project "Sandbox"
 	location "Sandbox"
 	kind "ConsoleApp"
 	language "C++"
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -116,7 +120,6 @@ project "Sandbox"
 
 	filter "system:windows"
 		cppdialect "C++20"
-		staticruntime "On"
 		systemversion "latest"
 
 		defines
@@ -126,15 +129,16 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "QT_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "QT_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		optimize "On"
 
 	filter "configurations:Dist"
 		defines "QT_DIST"
-		buildoptions "/MD"
+		runtime "Release"
+
 		optimize "On"
