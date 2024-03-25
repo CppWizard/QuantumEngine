@@ -1,5 +1,6 @@
 workspace "QuantumEngine"
 	architecture "x64"
+	startproject "Sandbox"
 
 	configurations
 	{

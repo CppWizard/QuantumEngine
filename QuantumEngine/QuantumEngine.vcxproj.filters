@@ -4,6 +4,9 @@
     <Filter Include="Platform">
       <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform\OpenGL">
+      <UniqueIdentifier>{1E7D2C1D-8A08-9AE1-9319-1DD6FF23F6E1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Platform\Windows">
       <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
     </Filter>
@@ -13,8 +16,14 @@
     <Filter Include="QuantumEngine\Events">
       <UniqueIdentifier>{CA23D290-B6B2-5B5A-5FD1-6F554B3F6C00}</UniqueIdentifier>
     </Filter>
+    <Filter Include="QuantumEngine\ImGui">
+      <UniqueIdentifier>{508822F5-BCE9-FF02-4557-46B5B1B736C2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h">
+      <Filter>Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
       <Filter>Platform\Windows</Filter>
     </ClInclude>
@@ -40,6 +49,9 @@
     <ClInclude Include="src\QuantumEngine\Events\MouseEvent.h">
       <Filter>QuantumEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h">
+      <Filter>QuantumEngine\ImGui</Filter>
+    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Layer.h">
       <Filter>QuantumEngine</Filter>
     </ClInclude>
@@ -53,15 +65,19 @@
       <Filter>QuantumEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\qtpch.h" />
-    <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp">
+      <Filter>Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Application.cpp">
       <Filter>QuantumEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp">
+      <Filter>QuantumEngine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Layer.cpp">
       <Filter>QuantumEngine</Filter>
@@ -73,7 +89,5 @@
       <Filter>QuantumEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\qtpch.cpp" />
-    <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
   </ItemGroup>
 </Project>
