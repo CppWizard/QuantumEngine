@@ -6,6 +6,10 @@
 #include "QuantumEngine/Layer.h"
 #include "QuantumEngine/Log.h"
 
+#include "QuantumEngine/Input.h"
+#include "QuantumEngine/KeyCodes.h"
+#include "QuantumEngine/MouseButtonCodes.h"
+
 #include "QuantumEngine/ImGui/ImGuiLayer.h"
 
 // ---Entry Point---------------------

@@ -167,9 +167,11 @@
     <ClInclude Include="src\QuantumEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\QuantumEngine\Input.h" />
+    <ClInclude Include="src\QuantumEngine\KeyCodes.h" />
     <ClInclude Include="src\QuantumEngine\Layer.h" />
     <ClInclude Include="src\QuantumEngine\LayerStack.h" />
     <ClInclude Include="src\QuantumEngine\Log.h" />
+    <ClInclude Include="src\QuantumEngine\MouseButtonCodes.h" />
     <ClInclude Include="src\QuantumEngine\Window.h" />
     <ClInclude Include="src\qtpch.h" />
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
