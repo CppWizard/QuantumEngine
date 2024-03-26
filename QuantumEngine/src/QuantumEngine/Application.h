@@ -7,6 +7,8 @@
 #include "Events/Event.h"
 #include "QuantumEngine/Events/AppEvent.h"
 
+#include "QuantumEngine/ImGui/ImGuiLayer.h"
+
 namespace Quantum {
 
 	class QUANTUM_API Application
@@ -29,6 +31,7 @@ namespace Quantum {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

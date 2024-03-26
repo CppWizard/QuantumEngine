@@ -115,6 +115,7 @@ project "Sandbox"
 	{
 		"QuantumEngine/vendor/spdlog/include",
 		"QuantumEngine/src",
+		"QuantumEngine/vendor",
 		"%{IncludeDir.glm}"
 	}
 
