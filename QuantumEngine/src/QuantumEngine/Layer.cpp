@@ -8,9 +8,4 @@ namespace Quantum {
 	{
 	}
 
-	Layer::~Layer()
-	{
-
-	}
-
 }
