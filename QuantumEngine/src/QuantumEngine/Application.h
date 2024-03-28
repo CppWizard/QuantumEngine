@@ -13,6 +13,8 @@
 #include "QuantumEngine/Renderer/Buffer.h"
 #include "QuantumEngine/Renderer/VertexArray.h"
 
+#include "QuantumEngine/Renderer/OrthoGraphicCamera.h"
+
 namespace Quantum {
 
 	class QUANTUM_API Application
@@ -44,6 +46,8 @@ namespace Quantum {
 
 		std::shared_ptr<Shader> m_BlueShader;
 		std::shared_ptr<VertexArray> m_SquareVA;
+
+		OrthoGraphicCamera m_Camera;
 	private:
 		static Application* s_Instance;
 	};

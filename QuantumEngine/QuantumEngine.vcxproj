@@ -146,6 +146,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\RendererAPI.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\RenderCommand.h" />
@@ -594,6 +595,7 @@
     <ClInclude Include="src\QuantumEngine\Renderer\VertexArray.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\RendererAPI.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\RenderCommand.cpp" />
