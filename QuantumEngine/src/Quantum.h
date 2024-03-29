@@ -20,6 +20,7 @@
 
 #include "QuantumEngine/Renderer/Buffer.h"
 #include "QuantumEngine/Renderer/Shader.h"
+#include "QuantumEngine/Renderer/Texture.h"
 #include "QuantumEngine/Renderer/VertexArray.h"
 
 #include "QuantumEngine/Renderer/OrthographicCamera.h"

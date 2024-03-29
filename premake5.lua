@@ -19,6 +19,7 @@ IncludeDir["GLFW"] = "QuantumEngine/vendor/GLFW/include"
 IncludeDir["Glad"] = "QuantumEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "QuantumEngine/vendor/imgui"
 IncludeDir["glm"] = "QuantumEngine/vendor/glm"
+IncludeDir["stb_image"] = "QuantumEngine/vendor/stb_image"
 
 group "Dependencies"
 	include "QuantumEngine/vendor/GLFW"
@@ -44,6 +45,8 @@ project "QuantumEngine"
 	{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/stb_image/**.h",
+		"%{prj.name}/vendor/stb_image/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
@@ -60,7 +63,8 @@ project "QuantumEngine"
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.stb_image}"
 	}
 
 	links

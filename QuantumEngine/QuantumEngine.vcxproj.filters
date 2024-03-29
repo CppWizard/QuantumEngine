@@ -16,6 +16,9 @@
     <Filter Include="src\QuantumEngine">
       <UniqueIdentifier>{FDA321D7-69BA-1F6D-B231-AB8E1E87F0F4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\QuantumEngine\Core">
+      <UniqueIdentifier>{75CE41FE-61C8-6A50-4A35-016136CED0BC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\QuantumEngine\Events">
       <UniqueIdentifier>{4151119B-2D76-601B-56C1-45AB42455F39}</UniqueIdentifier>
     </Filter>
@@ -46,12 +49,27 @@
     <Filter Include="vendor\glm\glm\gtx">
       <UniqueIdentifier>{B3A6A76B-9F8A-68C1-08EB-6214F4ED5243}</UniqueIdentifier>
     </Filter>
+    <Filter Include="vendor\stb_image">
+      <UniqueIdentifier>{0DA0BA59-F998-D9AB-22CB-BE300E23B9B7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
     <ClInclude Include="src\Platform\Windows\WindowsInput.h">
@@ -68,6 +86,9 @@
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Core.h">
       <Filter>src\QuantumEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\Timestep.h">
+      <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\EntryPoint.h">
       <Filter>src\QuantumEngine</Filter>
@@ -111,10 +132,25 @@
     <ClInclude Include="src\QuantumEngine\Renderer\GraphicsContext.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\RenderCommand.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\Renderer.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\RendererAPI.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\Shader.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\Texture.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\VertexArray.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Window.h">
@@ -1371,12 +1407,27 @@
     <ClInclude Include="vendor\glm\glm\vector_relational.hpp">
       <Filter>vendor\glm\glm</Filter>
     </ClInclude>
+    <ClInclude Include="vendor\stb_image\stb_image.h">
+      <Filter>vendor\stb_image</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLShader.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLTexture.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
@@ -1406,14 +1457,32 @@
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\RenderCommand.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\Renderer.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\RendererAPI.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\Shader.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\Texture.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\VertexArray.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\qtpch.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\stb_image\stb_image.cpp">
+      <Filter>vendor\stb_image</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
