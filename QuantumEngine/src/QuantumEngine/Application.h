@@ -7,17 +7,13 @@
 #include "Events/Event.h"
 #include "QuantumEngine/Events/AppEvent.h"
 
+#include "QuantumEngine/Core/Timestep.h"
+
 #include "QuantumEngine/ImGui/ImGuiLayer.h"
-
-#include "QuantumEngine/Renderer/Shader.h"
-#include "QuantumEngine/Renderer/Buffer.h"
-#include "QuantumEngine/Renderer/VertexArray.h"
-
-#include "QuantumEngine/Renderer/OrthoGraphicCamera.h"
 
 namespace Quantum {
 
-	class QUANTUM_API Application
+	class Application
 	{
 	public:
 		Application();
@@ -36,18 +32,13 @@ namespace Quantum {
 	private:
 		bool OnWindowClose(WindowCloseEvent& e);
 
+	private:
 		std::unique_ptr<Window> m_Window;
 		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 
-		std::shared_ptr<Shader> m_Shader;
-		std::shared_ptr<VertexArray> m_VertexArray;
-
-		std::shared_ptr<Shader> m_BlueShader;
-		std::shared_ptr<VertexArray> m_SquareVA;
-
-		OrthoGraphicCamera m_Camera;
+		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
 	};
