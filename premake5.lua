@@ -11,6 +11,11 @@ workspace "QuantumEngine"
 
 disablewarnings "4996"
 
+flags
+	{
+		"MultiProcessorCompile"
+	}
+
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
