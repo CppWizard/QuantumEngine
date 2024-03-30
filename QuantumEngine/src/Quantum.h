@@ -11,6 +11,7 @@
 #include "QuantumEngine/Input.h"
 #include "QuantumEngine/KeyCodes.h"
 #include "QuantumEngine/MouseButtonCodes.h"
+#include "QuantumEngine/OrthographicCameraController.h"
 
 #include "QuantumEngine/ImGui/ImGuiLayer.h"
 
