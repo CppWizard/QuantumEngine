@@ -81,17 +81,38 @@
     <ClInclude Include="src\Quantum.h">
       <Filter>src</Filter>
     </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Application.h">
-      <Filter>src\QuantumEngine</Filter>
+    <ClInclude Include="src\QuantumEngine\Core\Application.h">
+      <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Core.h">
-      <Filter>src\QuantumEngine</Filter>
+    <ClInclude Include="src\QuantumEngine\Core\Core.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\EntryPoint.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\Input.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\KeyCodes.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\Layer.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\LayerStack.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\Log.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\MouseButtonCodes.h">
+      <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Core\Timestep.h">
       <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\QuantumEngine\EntryPoint.h">
-      <Filter>src\QuantumEngine</Filter>
+    <ClInclude Include="src\QuantumEngine\Core\Window.h">
+      <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Events\AppEvent.h">
       <Filter>src\QuantumEngine\Events</Filter>
@@ -108,24 +129,6 @@
     <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h">
       <Filter>src\QuantumEngine\ImGui</Filter>
     </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Input.h">
-      <Filter>src\QuantumEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QuantumEngine\KeyCodes.h">
-      <Filter>src\QuantumEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Layer.h">
-      <Filter>src\QuantumEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QuantumEngine\LayerStack.h">
-      <Filter>src\QuantumEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Log.h">
-      <Filter>src\QuantumEngine</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QuantumEngine\MouseButtonCodes.h">
-      <Filter>src\QuantumEngine</Filter>
-    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\Buffer.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
@@ -133,6 +136,9 @@
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\OrthographicCameraController.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\RenderCommand.h">
@@ -152,9 +158,6 @@
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\VertexArray.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
-    </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Window.h">
-      <Filter>src\QuantumEngine</Filter>
     </ClInclude>
     <ClInclude Include="src\qtpch.h">
       <Filter>src</Filter>
@@ -1436,8 +1439,17 @@
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
-    <ClCompile Include="src\QuantumEngine\Application.cpp">
-      <Filter>src\QuantumEngine</Filter>
+    <ClCompile Include="src\QuantumEngine\Core\Application.cpp">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Core\Layer.cpp">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Core\LayerStack.cpp">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Core\Log.cpp">
+      <Filter>src\QuantumEngine\Core</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiBuild.cpp">
       <Filter>src\QuantumEngine\ImGui</Filter>
@@ -1445,19 +1457,13 @@
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\QuantumEngine\ImGui</Filter>
     </ClCompile>
-    <ClCompile Include="src\QuantumEngine\Layer.cpp">
-      <Filter>src\QuantumEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\QuantumEngine\LayerStack.cpp">
-      <Filter>src\QuantumEngine</Filter>
-    </ClCompile>
-    <ClCompile Include="src\QuantumEngine\Log.cpp">
-      <Filter>src\QuantumEngine</Filter>
-    </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\OrthographicCameraController.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\RenderCommand.cpp">

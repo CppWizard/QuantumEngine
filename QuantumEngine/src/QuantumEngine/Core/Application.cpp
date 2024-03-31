@@ -1,7 +1,7 @@
 #include "qtpch.h"
 #include "Application.h"
 
-#include "QuantumEngine/Log.h"
+#include "QuantumEngine/Core/Log.h"
 
 #include "QuantumEngine/Renderer/Renderer.h"
 

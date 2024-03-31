@@ -1,8 +1,8 @@
 #include "qtpch.h"
 #include "OrthographicCameraController.h"
 
-#include "QuantumEngine/Input.h"
-#include "QuantumEngine/KeyCodes.h"
+#include "QuantumEngine/Core/Input.h"
+#include "QuantumEngine/Core/KeyCodes.h"
 
 namespace Quantum {
 

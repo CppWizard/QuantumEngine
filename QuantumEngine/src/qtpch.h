@@ -13,7 +13,7 @@
 #include <unordered_map>
 #include <unordered_set>
 
-#include "QuantumEngine/Log.h"
+#include "QuantumEngine/Core/Log.h"
 
 #ifdef QT_PLATFORM_WINDOWS
 #include <Windows.h>

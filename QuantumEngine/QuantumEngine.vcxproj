@@ -146,7 +146,7 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\QuantumEngine\OrthographicCameraController.h" />
+    <ClInclude Include="src\QuantumEngine\Renderer\OrthographicCameraController.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h" />
@@ -156,21 +156,21 @@
     <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Quantum.h" />
-    <ClInclude Include="src\QuantumEngine\Application.h" />
-    <ClInclude Include="src\QuantumEngine\Core.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Application.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Core.h" />
     <ClInclude Include="src\QuantumEngine\Core\Timestep.h" />
-    <ClInclude Include="src\QuantumEngine\EntryPoint.h" />
+    <ClInclude Include="src\QuantumEngine\Core\EntryPoint.h" />
     <ClInclude Include="src\QuantumEngine\Events\AppEvent.h" />
     <ClInclude Include="src\QuantumEngine\Events\Event.h" />
     <ClInclude Include="src\QuantumEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\QuantumEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h" />
-    <ClInclude Include="src\QuantumEngine\Input.h" />
-    <ClInclude Include="src\QuantumEngine\KeyCodes.h" />
-    <ClInclude Include="src\QuantumEngine\Layer.h" />
-    <ClInclude Include="src\QuantumEngine\LayerStack.h" />
-    <ClInclude Include="src\QuantumEngine\Log.h" />
-    <ClInclude Include="src\QuantumEngine\MouseButtonCodes.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Input.h" />
+    <ClInclude Include="src\QuantumEngine\Core\KeyCodes.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Layer.h" />
+    <ClInclude Include="src\QuantumEngine\Core\LayerStack.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Log.h" />
+    <ClInclude Include="src\QuantumEngine\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\Buffer.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.h" />
@@ -180,7 +180,7 @@
     <ClInclude Include="src\QuantumEngine\Renderer\Shader.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\Texture.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\VertexArray.h" />
-    <ClInclude Include="src\QuantumEngine\Window.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Window.h" />
     <ClInclude Include="src\qtpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
@@ -601,7 +601,7 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\QuantumEngine\OrthographicCameraController.cpp" />
+    <ClCompile Include="src\QuantumEngine\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp" />
@@ -610,12 +610,12 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLVertexArray.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
-    <ClCompile Include="src\QuantumEngine\Application.cpp" />
+    <ClCompile Include="src\QuantumEngine\Core\Application.cpp" />
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp" />
-    <ClCompile Include="src\QuantumEngine\Layer.cpp" />
-    <ClCompile Include="src\QuantumEngine\LayerStack.cpp" />
-    <ClCompile Include="src\QuantumEngine\Log.cpp" />
+    <ClCompile Include="src\QuantumEngine\Core\Layer.cpp" />
+    <ClCompile Include="src\QuantumEngine\Core\LayerStack.cpp" />
+    <ClCompile Include="src\QuantumEngine\Core\Log.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\RenderCommand.cpp" />

@@ -2,16 +2,16 @@
 
 // For use by Quantum applications
 
-#include "QuantumEngine/Application.h"
-#include "QuantumEngine/Layer.h"
-#include "QuantumEngine/Log.h"
+#include "QuantumEngine/Core/Application.h"
+#include "QuantumEngine/Core/Layer.h"
+#include "QuantumEngine/Core/Log.h"
 
 #include "QuantumEngine/Core/Timestep.h"
 
-#include "QuantumEngine/Input.h"
-#include "QuantumEngine/KeyCodes.h"
-#include "QuantumEngine/MouseButtonCodes.h"
-#include "QuantumEngine/OrthographicCameraController.h"
+#include "QuantumEngine/Core/Input.h"
+#include "QuantumEngine/Core/KeyCodes.h"
+#include "QuantumEngine/Core/MouseButtonCodes.h"
+#include "QuantumEngine/Renderer/OrthographicCameraController.h"
 
 #include "QuantumEngine/ImGui/ImGuiLayer.h"
 
@@ -28,5 +28,5 @@
 // -----------------------------------
 
 // ---Entry Point---------------------
-#include "QuantumEngine/EntryPoint.h"
+#include "QuantumEngine/Core/EntryPoint.h"
 // -----------------------------------

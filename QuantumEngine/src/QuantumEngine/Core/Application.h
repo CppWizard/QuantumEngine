@@ -3,8 +3,8 @@
 #include "Core.h"
 
 #include "Window.h"
-#include "QuantumEngine/LayerStack.h"
-#include "Events/Event.h"
+#include "QuantumEngine/Core/LayerStack.h"
+#include "QuantumEngine/Events/Event.h"
 #include "QuantumEngine/Events/AppEvent.h"
 
 #include "QuantumEngine/Core/Timestep.h"

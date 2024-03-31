@@ -1,6 +1,6 @@
 #pragma once
 
-#include "QuantumEngine/Window.h"
+#include "QuantumEngine/Core/Window.h"
 #include "QuantumEngine/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>

@@ -2,7 +2,7 @@
 
 #include "qtpch.h"
 
-#include "QuantumEngine/Core.h"
+#include "QuantumEngine/Core/Core.h"
 #include "QuantumEngine/Events/Event.h"
 
 namespace Quantum {

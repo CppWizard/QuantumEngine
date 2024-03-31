@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "QuantumEngine/Core.h"
+#include "QuantumEngine/Core/Core.h"
 
 namespace Quantum {
 
