@@ -25,8 +25,3 @@
 #include "QuantumEngine/Renderer/VertexArray.h"
 
 #include "QuantumEngine/Renderer/OrthographicCamera.h"
-// -----------------------------------
-
-// ---Entry Point---------------------
-#include "QuantumEngine/Core/EntryPoint.h"
-// -----------------------------------
