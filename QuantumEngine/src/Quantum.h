@@ -17,6 +17,7 @@
 
 // ---Renderer------------------------
 #include "QuantumEngine/Renderer/Renderer.h"
+#include"QuantumEngine/Renderer/Renderer2D.h"
 #include "QuantumEngine/Renderer/RenderCommand.h"
 
 #include "QuantumEngine/Renderer/Buffer.h"
