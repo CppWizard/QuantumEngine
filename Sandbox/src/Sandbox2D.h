@@ -21,6 +21,8 @@ private:
 	Quantum::Ref<Quantum::VertexArray> m_SquareVA;
 	Quantum::Ref<Quantum::Shader> m_FlatColorShader;
 
+	Quantum::Ref<Quantum::Texture2D> m_CheckerboardTexture;
+
 	glm::vec4 m_SquareColor = { 0.2f, 0.3f, 0.8f, 1.0f };
 };
 
