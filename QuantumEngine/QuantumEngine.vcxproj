@@ -621,6 +621,7 @@
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\QuantumEngine\Renderer\GraphicsContext.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\OrthographicCameraController.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\RenderCommand.cpp" />

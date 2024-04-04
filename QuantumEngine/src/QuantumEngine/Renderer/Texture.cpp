@@ -1,7 +1,7 @@
 #include "qtpch.h"
-#include "Texture.h"
+#include "QuantumEngine/Renderer/Texture.h"
 
-#include "Renderer.h"
+#include "QuantumEngine/Renderer/Renderer.h"
 #include "Platform/OpenGL/OpenGLTexture.h"
 
 namespace Quantum {

@@ -1,14 +1,14 @@
 #pragma once
 
 #include "QuantumEngine/Core/Core.h"
-#include "Layer.h"
+#include "QuantumEngine/Core/Layer.h"
 
 namespace Quantum {
 
 	class LayerStack
 	{
 	public:
-		LayerStack();
+		LayerStack() = default;
 		~LayerStack();
 
 		void PushLayer(Layer* layer);

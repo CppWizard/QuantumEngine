@@ -1,12 +1,7 @@
 #include "qtpch.h"
-#include "LayerStack.h"
+#include "QuantumEngine/Core/LayerStack.h"
 
 namespace Quantum {
-
-	LayerStack::LayerStack()
-	{
-		
-	}
 
 	LayerStack::~LayerStack()
 	{

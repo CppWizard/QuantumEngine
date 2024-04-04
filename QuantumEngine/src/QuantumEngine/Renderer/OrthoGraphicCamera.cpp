@@ -1,5 +1,5 @@
 #include "qtpch.h"
-#include "OrthoGraphicCamera.h"
+#include "QuantumEngine/Renderer/OrthoGraphicCamera.h"
 
 #include <glm/gtc/matrix_transform.hpp>
 

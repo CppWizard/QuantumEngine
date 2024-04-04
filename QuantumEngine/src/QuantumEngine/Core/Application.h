@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Core.h"
+#include "QuantumEngine/Core/Core.h"
 
-#include "Window.h"
+#include "QuantumEngine/Core/Window.h"
 #include "QuantumEngine/Core/LayerStack.h"
 #include "QuantumEngine/Events/Event.h"
 #include "QuantumEngine/Events/AppEvent.h"
@@ -17,7 +17,7 @@ namespace Quantum {
 	{
 	public:
 		Application();
-		virtual ~Application() = default;
+		virtual ~Application();
 
 		void Run();
 

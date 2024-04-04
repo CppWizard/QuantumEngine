@@ -1,5 +1,6 @@
 #pragma once
 #include "qtpch.h"
+
 #include "QuantumEngine/Core/Core.h"
 
 namespace Quantum {
@@ -34,7 +35,7 @@ namespace Quantum {
 
 #define EVENT_CLASS_CATEGORY(category) virtual int GetCategoryFlags() const override { return category;}
 
-	class QUANTUM_API Event
+	class Event
 	{
 	public:
 		bool Handled = false;

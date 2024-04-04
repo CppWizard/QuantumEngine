@@ -1,4 +1,5 @@
 #pragma once
+#include "QuantumEngine/Core/Core.h"
 
 #ifdef QT_PLATFORM_WINDOWS
 
@@ -15,5 +16,6 @@ int main(int argc, char** argv)
 	app->Run();
 	delete app;
 }
+
 
 #endif

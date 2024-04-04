@@ -1,5 +1,5 @@
 #include "qtpch.h"
-#include "OrthographicCameraController.h"
+#include "QuantumEngine/Renderer/OrthographicCameraController.h"
 
 #include "QuantumEngine/Core/Input.h"
 #include "QuantumEngine/Core/KeyCodes.h"

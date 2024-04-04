@@ -1,8 +1,8 @@
 #pragma once
 
-#include "OrthoGraphicCamera.h"
+#include "QuantumEngine/Renderer/OrthoGraphicCamera.h"
 
-#include "Texture.h"
+#include "QuantumEngine/Renderer/Texture.h"
 
 namespace Quantum {
 
