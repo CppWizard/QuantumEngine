@@ -16,6 +16,8 @@ namespace Quantum {
 
 	void OpenGLContext::Init()
 	{
+		QT_PROFILE_FUNCTION();
+
 		glfwMakeContextCurrent(m_WindowHandle);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
 		QT_CORE_ASSERT(status, "Failed to initialize Glad!");
@@ -39,6 +41,8 @@ namespace Quantum {
 
 	void OpenGLContext::SwapBuffers()
 	{
+		QT_PROFILE_FUNCTION();
+
 		glfwSwapBuffers(m_WindowHandle);
 	}
 

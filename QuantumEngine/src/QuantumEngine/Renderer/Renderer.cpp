@@ -8,6 +8,8 @@ namespace Quantum {
 
 	void Renderer::Init()
 	{
+		QT_PROFILE_FUNCTION();
+
 		RenderCommand::Init();
 		Renderer2D::Init();
 	}
