@@ -170,6 +170,7 @@
     <ClInclude Include="src\QuantumEngine\Core\MouseButtonCodes.h" />
     <ClInclude Include="src\QuantumEngine\Core\Timestep.h" />
     <ClInclude Include="src\QuantumEngine\Core\Window.h" />
+    <ClInclude Include="src\QuantumEngine\Debug\Instrumentor.h" />
     <ClInclude Include="src\QuantumEngine\Events\AppEvent.h" />
     <ClInclude Include="src\QuantumEngine\Events\Event.h" />
     <ClInclude Include="src\QuantumEngine\Events\KeyEvent.h" />

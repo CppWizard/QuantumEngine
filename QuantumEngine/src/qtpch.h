@@ -15,6 +15,8 @@
 
 #include "QuantumEngine/Core/Log.h"
 
+#include "QuantumEngine/Debug/Instrumentor.h"
+
 #ifdef QT_PLATFORM_WINDOWS
 #include <Windows.h>
 #endif
