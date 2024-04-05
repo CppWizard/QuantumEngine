@@ -616,9 +616,11 @@
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\Application.cpp" />
+    <ClCompile Include="src\QuantumEngine\Core\Input.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\Layer.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\LayerStack.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\Log.cpp" />
+    <ClCompile Include="src\QuantumEngine\Core\Window.cpp" />
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiBuild.cpp" />
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp" />
