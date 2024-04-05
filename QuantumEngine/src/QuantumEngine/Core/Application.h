@@ -11,6 +11,8 @@
 
 #include "QuantumEngine/ImGui/ImGuiLayer.h"
 
+int main(int argc, char** argv);
+
 namespace Quantum {
 
 	class Application
@@ -18,8 +20,6 @@ namespace Quantum {
 	public:
 		Application();
 		virtual ~Application();
-
-		void Run();
 
 		void OnEvent(Event& e);
 
@@ -30,6 +30,7 @@ namespace Quantum {
 
 		inline static Application& Get() { return *s_Instance; }
 	private:
+		void Run();
 		bool OnWindowClose(WindowCloseEvent& e);
 		bool OnWindowResize(WindowResizeEvent& e);
 
@@ -43,6 +44,7 @@ namespace Quantum {
 		float m_LastFrameTime = 0.0f;
 	private:
 		static Application* s_Instance;
+		friend int ::main(int argc, char** argv);
 	};
 
 	// To be defined in CLIENT
