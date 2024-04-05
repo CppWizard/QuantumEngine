@@ -19,6 +19,9 @@
     <Filter Include="src\QuantumEngine\Core">
       <UniqueIdentifier>{75CE41FE-61C8-6A50-4A35-016136CED0BC}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\QuantumEngine\Debug">
+      <UniqueIdentifier>{33F887C6-9F2F-D05D-A839-348114F0F656}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\QuantumEngine\Events">
       <UniqueIdentifier>{4151119B-2D76-601B-56C1-45AB42455F39}</UniqueIdentifier>
     </Filter>
@@ -113,6 +116,9 @@
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Core\Window.h">
       <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Debug\Instrumentor.h">
+      <Filter>src\QuantumEngine\Debug</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Events\AppEvent.h">
       <Filter>src\QuantumEngine\Events</Filter>
@@ -1416,7 +1422,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Debug\Instrumentor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1464,6 +1469,9 @@
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\GraphicsContext.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
@@ -1497,6 +1505,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\QuantumEngine\Renderer\GraphicsContext.cpp" />
   </ItemGroup>
 </Project>
