@@ -44,7 +44,7 @@ namespace Quantum {
 		{
 			QT_PROFILE_SCOPE("glfwInit");
 			int success = glfwInit();
-			QT_CORE_ASSERT(success, "Could not intialize GLFW!");
+			QT_CORE_ASSERT(success, "Could not initialize GLFW!");
 
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
