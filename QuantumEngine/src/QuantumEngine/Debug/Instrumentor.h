@@ -156,7 +156,7 @@ namespace Quantum {
 	};
 }
 
-#define QT_PROFILE 1
+#define QT_PROFILE 0
 #if QT_PROFILE
 #define QT_PROFILE_BEGIN_SESSION(name, filepath) ::Quantum::Instrumentor::Get().BeginSession(name, filepath)
 #define QT_PROFILE_END_SESSION() ::Quantum::Instrumentor::Get().EndSession()
