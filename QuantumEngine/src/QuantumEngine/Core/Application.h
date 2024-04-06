@@ -1,6 +1,6 @@
 #pragma once
 
-#include "QuantumEngine/Core/Core.h"
+#include "QuantumEngine/Core/Base.h"
 
 #include "QuantumEngine/Core/Window.h"
 #include "QuantumEngine/Core/LayerStack.h"
@@ -27,6 +27,8 @@ namespace Quantum {
 		void PushOverlay(Layer* layer);
 
 		Window& GetWindow() { return *m_Window; }
+
+		void Close();
 
 		static Application& Get() { return *s_Instance; }
 	private:

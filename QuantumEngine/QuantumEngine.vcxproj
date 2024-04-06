@@ -160,7 +160,7 @@
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Quantum.h" />
     <ClInclude Include="src\QuantumEngine\Core\Application.h" />
-    <ClInclude Include="src\QuantumEngine\Core\Core.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Base.h" />
     <ClInclude Include="src\QuantumEngine\Core\EntryPoint.h" />
     <ClInclude Include="src\QuantumEngine\Core\Input.h" />
     <ClInclude Include="src\QuantumEngine\Core\KeyCodes.h" />

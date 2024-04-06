@@ -1,6 +1,6 @@
 #pragma once
 
-#include "QuantumEngine/Core/Core.h"
+#include "QuantumEngine/Core/Base.h"
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
 

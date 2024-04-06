@@ -1,7 +1,7 @@
 #pragma once
 #include "qtpch.h"
 
-#include "QuantumEngine/Core/Core.h"
+#include "QuantumEngine/Core/Base.h"
 
 namespace Quantum {
 

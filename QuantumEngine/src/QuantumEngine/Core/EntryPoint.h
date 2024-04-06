@@ -1,5 +1,5 @@
 #pragma once
-#include "QuantumEngine/Core/Core.h"
+#include "QuantumEngine/Core/Base.h"
 
 #ifdef QT_PLATFORM_WINDOWS
 

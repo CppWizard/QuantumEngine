@@ -1,6 +1,6 @@
 #pragma once
 
-#include "QuantumEngine/Core/Core.h"
+#include "QuantumEngine/Core/Base.h"
 #include "QuantumEngine/Core/Layer.h"
 
 namespace Quantum {

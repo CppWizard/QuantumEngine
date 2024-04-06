@@ -2,7 +2,7 @@
 
 #include <string>
 
-#include "QuantumEngine/Core/Core.h"
+#include "QuantumEngine/Core/Base.h"
 
 namespace Quantum {
 
@@ -13,6 +13,7 @@ namespace Quantum {
 
 		virtual uint32_t GetWidth() const = 0;
 		virtual uint32_t GetHeight() const = 0;
+		virtual uint32_t GetRendererID() const = 0;
 
 		virtual void SetData(void* data, uint32_t size) = 0;
 

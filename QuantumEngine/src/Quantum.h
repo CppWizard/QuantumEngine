@@ -2,7 +2,7 @@
 
 // For use by Quantum applications
 
-#include "QuantumEngine/Core/Core.h"
+#include "QuantumEngine/Core/Base.h"
 
 #include "QuantumEngine/Core/Application.h"
 #include "QuantumEngine/Core/Layer.h"
