@@ -44,12 +44,22 @@
 #endif // End of platform detection
 
 #ifdef QT_DEBUG
+#if defined(QT_PLATFORM_WINDOWS)
+#define QT_DEBUGBREAK() __debugbreak()
+#elif defined(QT_PLATFORM_LINUX)
+#include <signal.h>
+#define QT_DEBUGBREAK() raise(SIGTRAP)
+#else
+#error "Platform doesn't support debugbreak yet!"
+#endif
 #define QT_ENABLE_ASSERTS
+#else
+#define QT_DEBUGBREAK()
 #endif
 
 #ifdef QT_ENABLE_ASSERTS
-#define QT_ASSERT(x, ...) { if(!(x)) { QT_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
-#define QT_CORE_ASSERT(x, ...) { if(!(x)) { QT_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#define QT_ASSERT(x, ...) { if(!(x)) { QT_ERROR("Assertion Failed: {0}", __VA_ARGS__); QT_DEBUGBREAK(); } }
+#define QT_CORE_ASSERT(x, ...) { if(!(x)) { QT_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); QT_DEBUGBREAK(); } }
 #else
 #define QT_ASSERT(x, ...)
 #define QT_CORE_ASSERT(x, ...)

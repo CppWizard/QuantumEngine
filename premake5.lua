@@ -58,7 +58,8 @@ project "QuantumEngine"
 
 	defines
 	{
-		"_CRT_SECURE_NO_WARNINGS"
+		"_CRT_SECURE_NO_WARNINGS",
+		"GLFW_INCLUDE_NONE"
 	}
 
 	includedirs
@@ -85,9 +86,7 @@ project "QuantumEngine"
 
 		defines
 		{
-			"QT_PLATFORM_WINDOWS",
-			"QT_BUILD_DLL",
-			"GLFW_INCLUDE_NONE"
+			
 		}
 
 	filter "configurations:Debug"
