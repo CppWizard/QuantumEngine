@@ -157,7 +157,6 @@
     <ClInclude Include="src\Platform\OpenGL\OpenGLShader.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLTexture.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLVertexArray.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Quantum.h" />
     <ClInclude Include="src\QuantumEngine\Core\Application.h" />
@@ -168,7 +167,7 @@
     <ClInclude Include="src\QuantumEngine\Core\Layer.h" />
     <ClInclude Include="src\QuantumEngine\Core\LayerStack.h" />
     <ClInclude Include="src\QuantumEngine\Core\Log.h" />
-    <ClInclude Include="src\QuantumEngine\Core\MouseButtonCodes.h" />
+    <ClInclude Include="src\QuantumEngine\Core\MouseCodes.h" />
     <ClInclude Include="src\QuantumEngine\Core\Timestep.h" />
     <ClInclude Include="src\QuantumEngine\Core\Window.h" />
     <ClInclude Include="src\QuantumEngine\Debug\Instrumentor.h" />
@@ -619,7 +618,6 @@
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\Application.cpp" />
-    <ClCompile Include="src\QuantumEngine\Core\Input.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\Layer.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\LayerStack.cpp" />
     <ClCompile Include="src\QuantumEngine\Core\Log.cpp" />

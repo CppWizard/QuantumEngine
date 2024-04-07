@@ -12,7 +12,7 @@
 
 #include "QuantumEngine/Core/Input.h"
 #include "QuantumEngine/Core/KeyCodes.h"
-#include "QuantumEngine/Core/MouseButtonCodes.h"
+#include "QuantumEngine/Core/MouseCodes.h"
 #include "QuantumEngine/Renderer/OrthographicCameraController.h"
 
 #include "QuantumEngine/ImGui/ImGuiLayer.h"
