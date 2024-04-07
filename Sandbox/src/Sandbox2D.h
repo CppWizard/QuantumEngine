@@ -20,6 +20,7 @@ private:
 	// Temp
 	Quantum::Ref<Quantum::VertexArray> m_SquareVA;
 	Quantum::Ref<Quantum::Shader> m_FlatColorShader;
+	Quantum::Ref<Quantum::Framebuffer> m_Framebuffer;
 
 	Quantum::Ref<Quantum::Texture2D> m_CheckerboardTexture;
 
