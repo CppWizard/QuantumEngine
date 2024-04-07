@@ -1,6 +1,6 @@
 workspace "QuantumEngine"
 	architecture "x86_64"
-	startproject "Sandbox"
+	startproject "Hazelnut"
 
 	configurations
 	{
@@ -157,8 +157,8 @@ project "Sandbox"
 
 		optimize "on"
 
-project "Hazel-Editor"
-	location "Hazel-Editor"
+project "Hazelnut"
+	location "Hazelnut"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++20"
