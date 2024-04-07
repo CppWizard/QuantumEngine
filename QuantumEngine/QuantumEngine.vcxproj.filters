@@ -63,6 +63,9 @@
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClInclude>
     <ClInclude Include="src\Platform\OpenGL\OpenGLRendererAPI.h">
       <Filter>src\Platform\OpenGL</Filter>
     </ClInclude>
@@ -87,7 +90,7 @@
     <ClInclude Include="src\QuantumEngine\Core\Application.h">
       <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Core\Core.h">
+    <ClInclude Include="src\QuantumEngine\Core\Base.h">
       <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Core\EntryPoint.h">
@@ -136,6 +139,9 @@
       <Filter>src\QuantumEngine\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\Buffer.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\Framebuffer.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\GraphicsContext.h">
@@ -1430,6 +1436,9 @@
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp">
+      <Filter>src\Platform\OpenGL</Filter>
+    </ClCompile>
     <ClCompile Include="src\Platform\OpenGL\OpenGLRendererAPI.cpp">
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
@@ -1473,6 +1482,9 @@
       <Filter>src\QuantumEngine\ImGui</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Renderer\Framebuffer.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\GraphicsContext.cpp">
