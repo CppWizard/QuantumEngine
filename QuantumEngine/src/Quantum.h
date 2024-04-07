@@ -17,6 +17,10 @@
 
 #include "QuantumEngine/ImGui/ImGuiLayer.h"
 
+#include "QuantumEngine/Scene/Scene.h"
+#include "QuantumEngine/Scene/Entity.h"
+#include "QuantumEngine/Scene/Components.h"
+
 // ---Renderer------------------------
 #include "QuantumEngine/Renderer/Renderer.h"
 #include"QuantumEngine/Renderer/Renderer2D.h"

@@ -57,6 +57,7 @@
 #define QT_DEBUGBREAK()
 #endif
 
+// TODO: Make this macro able to take in no arguments except condition
 #ifdef QT_ENABLE_ASSERTS
 #define QT_ASSERT(x, ...) { if(!(x)) { QT_ERROR("Assertion Failed: {0}", __VA_ARGS__); QT_DEBUGBREAK(); } }
 #define QT_CORE_ASSERT(x, ...) { if(!(x)) { QT_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); QT_DEBUGBREAK(); } }
@@ -67,7 +68,7 @@
 
 #define BIT(x) (1 << x)
 
-#define QT_BIND_EVENT_FN(fn) std::bind(&fn, this, std::placeholders::_1)
+#define QT_BIND_EVENT_FN(fn) [this](auto&&... args) -> decltype(auto) { return this->fn(std::forward<decltype(args)>(args)...); }
 
 namespace Quantum {
 

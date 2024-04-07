@@ -27,15 +27,9 @@ namespace Quantum {
 
 	class Instrumentor
 	{
-	private:
-		std::mutex m_Mutex;
-		InstrumentationSession* m_CurrentSession;
-		std::ofstream m_OutputStream;
 	public:
-		Instrumentor()
-			: m_CurrentSession(nullptr)
-		{
-		}
+		Instrumentor(const Instrumentor&) = delete;
+		Instrumentor(Instrumentor&&) = delete;
 
 		void BeginSession(const std::string& name, const std::string& filepath = "results.json")
 		{
@@ -103,6 +97,15 @@ namespace Quantum {
 			return instance;
 		}
 	private:
+		Instrumentor()
+			: m_CurrentSession(nullptr)
+		{
+		}
+
+		~Instrumentor()
+		{
+			EndSession();
+		}
 
 		void WriteHeader()
 		{
@@ -128,6 +131,11 @@ namespace Quantum {
 				m_CurrentSession = nullptr;
 			}
 		}
+
+		private:
+			std::mutex m_Mutex;
+			InstrumentationSession* m_CurrentSession;
+			std::ofstream m_OutputStream;
 	};
 
 	class InstrumentationTimer
@@ -226,8 +234,10 @@ namespace Quantum {
 #define QT_PROFILE_FUNCTION()
 #define QT_PROFILE_BEGIN_SESSION(name, filepath) ::Quantum::Instrumentor::Get().BeginSession(name, filepath)
 #define QT_PROFILE_END_SESSION() ::Quantum::Instrumentor::Get().EndSession()
-#define QT_PROFILE_SCOPE(name) constexpr auto fixedName = ::Quantum::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
-									::Quantum::InstrumentationTimer timer##__LINE__(fixedName.Data)
+#define QT_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = ::Quantum::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
+											   ::Quantum::InstrumentationTimer timer##line(fixedName##line.Data)
+#define QT_PROFILE_SCOPE_LINE(name, line) QT_PROFILE_SCOPE_LINE2(name, line)
+#define QT_PROFILE_SCOPE(name) QT_PROFILE_SCOPE_LINE(name, __LINE__)
 #define QT_PROFILE_FUNCTION() QT_PROFILE_SCOPE(QT_FUNC_SIG)
 
 #define QT_PROFILE_BEGIN_SESSION(name, filepath)

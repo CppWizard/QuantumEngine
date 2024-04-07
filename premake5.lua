@@ -25,6 +25,7 @@ IncludeDir["Glad"] = "QuantumEngine/vendor/Glad/include"
 IncludeDir["ImGui"] = "QuantumEngine/vendor/imgui"
 IncludeDir["glm"] = "QuantumEngine/vendor/glm"
 IncludeDir["stb_image"] = "QuantumEngine/vendor/stb_image"
+IncludeDir["entt"] = "QuantumEngine/vendor/entt/include"
 
 group "Dependencies"
 	include "QuantumEngine/vendor/GLFW"
@@ -70,7 +71,8 @@ project "QuantumEngine"
 		"%{IncludeDir.Glad}",
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.stb_image}"
+		"%{IncludeDir.stb_image}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -125,7 +127,8 @@ project "Sandbox"
 		"QuantumEngine/vendor/spdlog/include",
 		"QuantumEngine/src",
 		"QuantumEngine/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -178,7 +181,8 @@ project "Hazelnut"
 		"QuantumEngine/vendor/spdlog/include",
 		"QuantumEngine/src",
 		"QuantumEngine/vendor",
-		"%{IncludeDir.glm}"
+		"%{IncludeDir.glm}",
+		"%{IncludeDir.entt}"
 	}
 
 	links
