@@ -1,5 +1,5 @@
 #include "Quantum.h"
-#include "QuantumEngine/Core/EntryPoint.h"
+#include <QuantumEngine/Core/EntryPoint.h>
 
 #include "EditorLayer.h"
 

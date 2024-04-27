@@ -6,6 +6,10 @@
 #include <iomanip>
 #include <string>
 #include <thread>
+#include <mutex>
+#include <sstream>
+
+#include "QuantumEngine/Core/Log.h"
 
 namespace Quantum {
 
@@ -14,7 +18,7 @@ namespace Quantum {
 	struct ProfileResult
 	{
 		std::string Name;
-
+		
 		FloatingPointMicroseconds Start;
 		std::chrono::microseconds ElapsedTime;
 		std::thread::id ThreadID;
@@ -40,7 +44,7 @@ namespace Quantum {
 				// Subsequent profiling output meant for the original session will end up in the
 				// newly opened session instead.  That's better than having badly formatted
 				// profiling output.
-				if (Log::GetCoreLogger()) // Edge case: BeginSession() might be before Log::Init()
+				if (Log::GetCoreLogger())  // Edge case: BeginSession() might be before Log::Init()
 				{
 					QT_CORE_ERROR("Instrumentor::BeginSession('{0}') when session '{1}' already open.", name, m_CurrentSession->Name);
 				}
@@ -53,9 +57,8 @@ namespace Quantum {
 				m_CurrentSession = new InstrumentationSession({ name });
 				WriteHeader();
 			}
-			else
-			{
-				if (Log::GetCoreLogger()) // Edge case: BeginSession() might be before Log::Init()
+			else {
+				if (Log::GetCoreLogger())  // Edge case: BeginSession() might be before Log::Init()
 				{
 					QT_CORE_ERROR("Instrumentor could not open results file '{0}'.", filepath);
 				}
@@ -84,7 +87,7 @@ namespace Quantum {
 			json << "}";
 
 			std::lock_guard lock(m_Mutex);
-			if (m_CurrentSession)
+			if (m_CurrentSession) 
 			{
 				m_OutputStream << json.str();
 				m_OutputStream.flush();
@@ -95,6 +98,7 @@ namespace Quantum {
 		{
 			static Instrumentor instance;
 			return instance;
+			
 		}
 	private:
 		Instrumentor()
@@ -121,7 +125,7 @@ namespace Quantum {
 
 		// Note: you must already own lock on m_Mutex before
 		// calling InternalEndSession()
-		void InternalEndSession()
+		void InternalEndSession() 
 		{
 			if (m_CurrentSession)
 			{
@@ -175,7 +179,7 @@ namespace Quantum {
 		struct ChangeResult
 		{
 			char Data[N];
-	};
+		};
 
 		template <size_t N, size_t K>
 		constexpr auto CleanupOutputString(const char(&expr)[N], const char(&remove)[K])
@@ -195,21 +199,21 @@ namespace Quantum {
 				srcIndex++;
 			}
 			return result;
-		}
+	}
 	}
 }
 
 #define QT_PROFILE 0
 #if QT_PROFILE
 // Resolve which function signature macro will be used. Note that this only
-// is resolved when the (pre)compiler starts, so the syntax highlighting
-// could mark the wrong one in your editor!
+	// is resolved when the (pre)compiler starts, so the syntax highlighting
+	// could mark the wrong one in your editor!
 #if defined(__GNUC__) || (defined(__MWERKS__) && (__MWERKS__ >= 0x3000)) || (defined(__ICC) && (__ICC >= 600)) || defined(__ghs__)
 #define QT_FUNC_SIG __PRETTY_FUNCTION__
 #elif defined(__DMC__) && (__DMC__ >= 0x810)
 #define QT_FUNC_SIG __PRETTY_FUNCTION__
-#elif (defined(__FUNCSIG__) || (_MSC_VER))
-#define QT_FUNC_SIG __FUNCSIG__
+#elif defined(__FUNCSIG__)
+#define QT_FUNC_SIG __FUNCSIG__) || (_MSC_VER)
 #elif (defined(__INTEL_COMPILER) && (__INTEL_COMPILER >= 600)) || (defined(__IBMCPP__) && (__IBMCPP__ >= 500))
 #define QT_FUNC_SIG __FUNCTION__
 #elif defined(__BORLANDC__) && (__BORLANDC__ >= 0x550)
@@ -221,17 +225,6 @@ namespace Quantum {
 #else
 #define QT_FUNC_SIG "QT_FUNC_SIG unknown!"
 #endif
-
-#define QT_PROFILE_BEGIN_SESSION(name, filepath) ::Quantum::Instrumentor::Get().BeginSession(name, filepath)
-#define QT_PROFILE_END_SESSION() ::Quantum::Instrumentor::Get().EndSession()
-#define QT_PROFILE_SCOPE(name) constexpr auto fixedName = ::Quantum::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
-									::Quantum::InstrumentationTimer timer##__LINE__(fixedName.Data)
-#define QT_PROFILE_FUNCTION() QT_PROFILE_SCOPE(QT_FUNC_SIG)
-#else
-#define QT_PROFILE_BEGIN_SESSION(name, filepath)
-#define QT_PROFILE_END_SESSION()
-#define QT_PROFILE_SCOPE(name)
-#define QT_PROFILE_FUNCTION()
 #define QT_PROFILE_BEGIN_SESSION(name, filepath) ::Quantum::Instrumentor::Get().BeginSession(name, filepath)
 #define QT_PROFILE_END_SESSION() ::Quantum::Instrumentor::Get().EndSession()
 #define QT_PROFILE_SCOPE_LINE2(name, line) constexpr auto fixedName##line = ::Quantum::InstrumentorUtils::CleanupOutputString(name, "__cdecl ");\
@@ -239,7 +232,7 @@ namespace Quantum {
 #define QT_PROFILE_SCOPE_LINE(name, line) QT_PROFILE_SCOPE_LINE2(name, line)
 #define QT_PROFILE_SCOPE(name) QT_PROFILE_SCOPE_LINE(name, __LINE__)
 #define QT_PROFILE_FUNCTION() QT_PROFILE_SCOPE(QT_FUNC_SIG)
-
+#else
 #define QT_PROFILE_BEGIN_SESSION(name, filepath)
 #define QT_PROFILE_END_SESSION()
 #define QT_PROFILE_SCOPE(name)

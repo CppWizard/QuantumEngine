@@ -58,8 +58,7 @@ namespace Quantum {
 	public:
 		AppRenderEvent() = default;
 
-		EVENT_CLASS_TYPE(AppRenderer)
+		EVENT_CLASS_TYPE(AppRender)
 			EVENT_CLASS_CATEGORY(EventCategoryApplication)
 	};
-
 }

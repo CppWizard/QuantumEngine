@@ -1,6 +1,6 @@
 #pragma once
 
-#include "qtpch.h"
+#include <sstream>
 
 #include "QuantumEngine/Core/Base.h"
 #include "QuantumEngine/Events/Event.h"
@@ -13,16 +13,16 @@ namespace Quantum {
 		uint32_t Width;
 		uint32_t Height;
 
-		WindowProps(const std::string& title = "Quantum Engine",
-			uint32_t width = 1280,
-			uint32_t height = 720)
+		WindowProps(const std::string& title = "Hazel Engine",
+			uint32_t width = 1600,
+			uint32_t height = 900)
 			: Title(title), Width(width), Height(height)
 		{
 		}
 	};
 
 	// Interface representing a desktop system based Window
-	class Window
+	class  Window
 	{
 	public:
 		using EventCallbackFn = std::function<void(Event&)>;

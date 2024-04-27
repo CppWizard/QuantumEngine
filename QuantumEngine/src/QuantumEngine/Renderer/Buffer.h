@@ -33,10 +33,10 @@ namespace Quantum {
 		std::string Name;
 		ShaderDataType Type;
 		uint32_t Size;
-		size_t Offset;
+		uint32_t Offset;
 		bool Normalized;
 
-		BufferElement() = default;
+		BufferElement() {}
 
 		BufferElement(ShaderDataType type, const std::string& name, bool normalized = false)
 			: Name(name), Type(type), Size(ShaderDataTypeSize(type)), Offset(0), Normalized(normalized)
@@ -49,10 +49,10 @@ namespace Quantum {
 			{
 			case ShaderDataType::Float:   return 1;
 			case ShaderDataType::Float2:  return 2;
-			case ShaderDataType::Float3:  return 3; // 3* float3
-			case ShaderDataType::Float4:  return 4; // 4* float4
-			case ShaderDataType::Mat3:    return 3 * 3;
-			case ShaderDataType::Mat4:    return 4 * 4;
+			case ShaderDataType::Float3:  return 3;
+			case ShaderDataType::Float4:  return 4;
+			case ShaderDataType::Mat3:    return 3; // 3* float3
+			case ShaderDataType::Mat4:    return 4; // 4* float4
 			case ShaderDataType::Int:     return 1;
 			case ShaderDataType::Int2:    return 2;
 			case ShaderDataType::Int3:    return 3;
@@ -70,7 +70,7 @@ namespace Quantum {
 	public:
 		BufferLayout() {}
 
-		BufferLayout(const std::initializer_list<BufferElement>& elements)
+		BufferLayout(std::initializer_list<BufferElement> elements)
 			: m_Elements(elements)
 		{
 			CalculateOffsetsAndStride();
@@ -86,7 +86,7 @@ namespace Quantum {
 	private:
 		void CalculateOffsetsAndStride()
 		{
-			size_t offset = 0;
+			uint32_t offset = 0;
 			m_Stride = 0;
 			for (auto& element : m_Elements)
 			{
@@ -103,7 +103,7 @@ namespace Quantum {
 	class VertexBuffer
 	{
 	public:
-		virtual ~VertexBuffer() {}
+		virtual ~VertexBuffer() = default;
 
 		virtual void Bind() const = 0;
 		virtual void Unbind() const = 0;
@@ -117,7 +117,7 @@ namespace Quantum {
 		static Ref<VertexBuffer> Create(float* vertices, uint32_t size);
 	};
 
-	// Currently QuantumEngine only supports 32-bit index buffers
+	// Currently Quantum only supports 32-bit index buffers
 	class IndexBuffer
 	{
 	public:

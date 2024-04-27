@@ -23,7 +23,7 @@ void Sandbox2D::OnDetach()
 
 void Sandbox2D::OnUpdate(Quantum::Timestep ts)
 {
-	QT_PROFILE_FUNCTION("Sandbox2D::OnUpdate");
+	QT_PROFILE_FUNCTION();
 
 	// Update
 	m_CameraController.OnUpdate(ts);

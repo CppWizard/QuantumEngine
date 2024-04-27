@@ -1,6 +1,6 @@
 # Binaries
 **/bin/
-!vendor/bin/premake/
+!vendor/premake/bin/
 bin-int/
 
 # QuantumEngine files
@@ -11,5 +11,6 @@ bin-int/
 **.sln
 **.vcxproj
 **.vcxproj.filters
+
 **.vcxproj.user
 

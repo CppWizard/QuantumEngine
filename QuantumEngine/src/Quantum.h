@@ -7,6 +7,7 @@
 #include "QuantumEngine/Core/Application.h"
 #include "QuantumEngine/Core/Layer.h"
 #include "QuantumEngine/Core/Log.h"
+#include "QuantumEngine/Core/Assert.h"
 
 #include "QuantumEngine/Core/Timestep.h"
 
@@ -19,6 +20,7 @@
 
 #include "QuantumEngine/Scene/Scene.h"
 #include "QuantumEngine/Scene/Entity.h"
+#include "QuantumEngine/Scene/ScriptableEntity.h"
 #include "QuantumEngine/Scene/Components.h"
 
 // ---Renderer------------------------

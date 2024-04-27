@@ -78,7 +78,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;QT_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -102,7 +102,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;QT_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -129,7 +129,7 @@
       <WarningLevel>Level3</WarningLevel>
       <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;GLFW_INCLUDE_NONE;QT_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>src;vendor\spdlog\include;vendor\GLFW\include;vendor\Glad\include;vendor\imgui;vendor\glm;vendor\stb_image;vendor\entt\include;vendor\yaml-cpp\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -150,9 +150,6 @@
     </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\QuantumEngine\Scene\SceneCamera.h" />
-    <ClInclude Include="src\QuantumEngine\Renderer\Camera.h" />
-    <ClInclude Include="src\QuantumEngine\Scene\Entity.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLBuffer.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLContext.h" />
     <ClInclude Include="src\Platform\OpenGL\OpenGLFramebuffer.h" />
@@ -163,6 +160,7 @@
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\Quantum.h" />
     <ClInclude Include="src\QuantumEngine\Core\Application.h" />
+    <ClInclude Include="src\QuantumEngine\Core\Assert.h" />
     <ClInclude Include="src\QuantumEngine\Core\Base.h" />
     <ClInclude Include="src\QuantumEngine\Core\EntryPoint.h" />
     <ClInclude Include="src\QuantumEngine\Core\Input.h" />
@@ -171,6 +169,7 @@
     <ClInclude Include="src\QuantumEngine\Core\LayerStack.h" />
     <ClInclude Include="src\QuantumEngine\Core\Log.h" />
     <ClInclude Include="src\QuantumEngine\Core\MouseCodes.h" />
+    <ClInclude Include="src\QuantumEngine\Core\PlatformDetection.h" />
     <ClInclude Include="src\QuantumEngine\Core\Timestep.h" />
     <ClInclude Include="src\QuantumEngine\Core\Window.h" />
     <ClInclude Include="src\QuantumEngine\Debug\Instrumentor.h" />
@@ -180,6 +179,7 @@
     <ClInclude Include="src\QuantumEngine\Events\MouseEvent.h" />
     <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\Buffer.h" />
+    <ClInclude Include="src\QuantumEngine\Renderer\Camera.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\Framebuffer.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.h" />
@@ -192,7 +192,11 @@
     <ClInclude Include="src\QuantumEngine\Renderer\Texture.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\VertexArray.h" />
     <ClInclude Include="src\QuantumEngine\Scene\Components.h" />
+    <ClInclude Include="src\QuantumEngine\Scene\Entity.h" />
     <ClInclude Include="src\QuantumEngine\Scene\Scene.h" />
+    <ClInclude Include="src\QuantumEngine\Scene\SceneCamera.h" />
+    <ClInclude Include="src\QuantumEngine\Scene\SceneSerializer.h" />
+    <ClInclude Include="src\QuantumEngine\Scene\ScriptableEntity.h" />
     <ClInclude Include="src\qtpch.h" />
     <ClInclude Include="vendor\glm\glm\common.hpp" />
     <ClInclude Include="vendor\glm\glm\detail\_features.hpp" />
@@ -613,8 +617,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\QuantumEngine\Scene\SceneCamera.cpp" />
-    <ClCompile Include="src\QuantumEngine\Scene\Entity.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLContext.cpp" />
     <ClCompile Include="src\Platform\OpenGL\OpenGLFramebuffer.cpp" />
@@ -643,7 +645,10 @@
     <ClCompile Include="src\QuantumEngine\Renderer\Shader.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\Texture.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\VertexArray.cpp" />
+    <ClCompile Include="src\QuantumEngine\Scene\Entity.cpp" />
     <ClCompile Include="src\QuantumEngine\Scene\Scene.cpp" />
+    <ClCompile Include="src\QuantumEngine\Scene\SceneCamera.cpp" />
+    <ClCompile Include="src\QuantumEngine\Scene\SceneSerializer.cpp" />
     <ClCompile Include="src\qtpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
@@ -658,6 +663,9 @@
     </ProjectReference>
     <ProjectReference Include="vendor\imgui\ImGui.vcxproj">
       <Project>{C0FF640D-2C14-8DBE-F595-301E616989EF}</Project>
+    </ProjectReference>
+    <ProjectReference Include="vendor\yaml-cpp\yaml-cpp.vcxproj">
+      <Project>{88F1A057-74BE-FB62-9DD7-E90A890331F1}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

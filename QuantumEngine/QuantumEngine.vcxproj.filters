@@ -90,6 +90,9 @@
     <ClInclude Include="src\QuantumEngine\Core\Application.h">
       <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\Assert.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Core\Base.h">
       <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
@@ -112,6 +115,9 @@
       <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Core\MouseCodes.h">
+      <Filter>src\QuantumEngine\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Core\PlatformDetection.h">
       <Filter>src\QuantumEngine\Core</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Core\Timestep.h">
@@ -139,6 +145,9 @@
       <Filter>src\QuantumEngine\ImGui</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\Buffer.h">
+      <Filter>src\QuantumEngine\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Renderer\Camera.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\Framebuffer.h">
@@ -177,7 +186,19 @@
     <ClInclude Include="src\QuantumEngine\Scene\Components.h">
       <Filter>src\QuantumEngine\Scene</Filter>
     </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Scene\Entity.h">
+      <Filter>src\QuantumEngine\Scene</Filter>
+    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Scene\Scene.h">
+      <Filter>src\QuantumEngine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Scene\SceneCamera.h">
+      <Filter>src\QuantumEngine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Scene\SceneSerializer.h">
+      <Filter>src\QuantumEngine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Scene\ScriptableEntity.h">
       <Filter>src\QuantumEngine\Scene</Filter>
     </ClInclude>
     <ClInclude Include="src\qtpch.h">
@@ -1434,9 +1455,6 @@
     <ClInclude Include="vendor\stb_image\stb_image.h">
       <Filter>vendor\stb_image</Filter>
     </ClInclude>
-    <ClInclude Include="src\QuantumEngine\Scene\Entity.h" />
-    <ClInclude Include="src\QuantumEngine\Renderer\Camera.h" />
-    <ClInclude Include="src\QuantumEngine\Scene\SceneCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Platform\OpenGL\OpenGLBuffer.cpp">
@@ -1523,7 +1541,16 @@
     <ClCompile Include="src\QuantumEngine\Renderer\VertexArray.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Scene\Entity.cpp">
+      <Filter>src\QuantumEngine\Scene</Filter>
+    </ClCompile>
     <ClCompile Include="src\QuantumEngine\Scene\Scene.cpp">
+      <Filter>src\QuantumEngine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Scene\SceneCamera.cpp">
+      <Filter>src\QuantumEngine\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Scene\SceneSerializer.cpp">
       <Filter>src\QuantumEngine\Scene</Filter>
     </ClCompile>
     <ClCompile Include="src\qtpch.cpp">
@@ -1532,7 +1559,5 @@
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
     </ClCompile>
-    <ClCompile Include="src\QuantumEngine\Scene\Entity.cpp" />
-    <ClCompile Include="src\QuantumEngine\Scene\SceneCamera.cpp" />
   </ItemGroup>
 </Project>

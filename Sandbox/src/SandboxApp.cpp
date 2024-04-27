@@ -1,5 +1,7 @@
 #include <Quantum.h>
-#include "QuantumEngine/Core/EntryPoint.h"
+#include <QuantumEngine/Core/EntryPoint.h>
+
+#include "Platform/OpenGL/OpenGLShader.h"
 
 #include "Sandbox2D.h"
 
@@ -16,9 +18,7 @@ public:
 
 	~Sandbox()
 	{
-
 	}
-
 };
 
 Quantum::Application* Quantum::CreateApplication()

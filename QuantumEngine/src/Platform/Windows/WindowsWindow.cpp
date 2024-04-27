@@ -1,9 +1,13 @@
 #include "qtpch.h"
 #include "Platform/Windows/WindowsWindow.h"
 
+#include "QuantumEngine/Core/Input.h"
+
 #include "QuantumEngine/Events/AppEvent.h"
 #include "QuantumEngine/Events/MouseEvent.h"
 #include "QuantumEngine/Events/KeyEvent.h"
+
+#include "QuantumEngine/Renderer/Renderer.h"
 
 #include "Platform/OpenGL/OpenGLContext.h"
 
@@ -45,16 +49,19 @@ namespace Quantum {
 			QT_PROFILE_SCOPE("glfwInit");
 			int success = glfwInit();
 			QT_CORE_ASSERT(success, "Could not initialize GLFW!");
-
 			glfwSetErrorCallback(GLFWErrorCallback);
 		}
 
 		{
 			QT_PROFILE_SCOPE("glfwCreateWindow");
+		#if defined(HZ_DEBUG)
+					if (Renderer::GetAPI() == RendererAPI::API::OpenGL)
+						glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, GLFW_TRUE);
+		#endif
 			m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 			++s_GLFWWindowCount;
 		}
-		
+
 		m_Context = GraphicsContext::Create(m_Window);
 		m_Context->Init();
 
@@ -106,7 +113,7 @@ namespace Quantum {
 				}
 			});
 
-			glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
+		glfwSetCharCallback(m_Window, [](GLFWwindow* window, unsigned int keycode)
 			{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
@@ -114,7 +121,7 @@ namespace Quantum {
 				data.EventCallback(event);
 			});
 
-			glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
+		glfwSetMouseButtonCallback(m_Window, [](GLFWwindow* window, int button, int action, int mods)
 			{
 				WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 
@@ -150,7 +157,6 @@ namespace Quantum {
 				MouseMovedEvent event((float)xPos, (float)yPos);
 				data.EventCallback(event);
 			});
-
 	}
 
 	void WindowsWindow::Shutdown()
@@ -189,7 +195,6 @@ namespace Quantum {
 	bool WindowsWindow::IsVSync() const
 	{
 		return m_Data.VSync;
-
-
 	}
+
 }

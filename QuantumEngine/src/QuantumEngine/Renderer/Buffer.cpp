@@ -1,5 +1,4 @@
 #include "qtpch.h"
-
 #include "QuantumEngine/Renderer/Buffer.h"
 
 #include "QuantumEngine/Renderer/Renderer.h"

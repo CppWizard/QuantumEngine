@@ -1,5 +1,6 @@
 #include "qtpch.h"
 #include "QuantumEngine/Renderer/Renderer.h"
+#include "Platform/OpenGL/OpenGLShader.h"
 #include "QuantumEngine/Renderer/Renderer2D.h"
 
 namespace Quantum {
@@ -24,7 +25,7 @@ namespace Quantum {
 		RenderCommand::SetViewport(0, 0, width, height);
 	}
 
-	void Renderer::BeginScene(OrthoGraphicCamera& camera)
+	void Renderer::BeginScene(OrthographicCamera& camera)
 	{
 		s_SceneData->ViewProjectionMatrix = camera.GetViewProjectionMatrix();
 	}
@@ -33,7 +34,7 @@ namespace Quantum {
 	{
 	}
 
-	void Renderer::Submit(const std::shared_ptr<Shader>& shader, const std::shared_ptr<VertexArray>& vertexArray, const glm::mat4& transform)
+	void Renderer::Submit(const Ref<Shader>& shader, const Ref<VertexArray>& vertexArray, const glm::mat4& transform)
 	{
 		shader->Bind();
 		shader->SetMat4("u_ViewProjection", s_SceneData->ViewProjectionMatrix);
@@ -41,5 +42,7 @@ namespace Quantum {
 
 		vertexArray->Bind();
 		RenderCommand::DrawIndexed(vertexArray);
+
 	}
+
 }

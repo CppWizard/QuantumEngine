@@ -1,8 +1,12 @@
 #pragma once
 
 #include "QuantumEngine/Core/Base.h"
+
+// This ignores all warnings raised inside External headers
+#pragma warning(push, 0)
 #include <spdlog/spdlog.h>
 #include <spdlog/fmt/ostr.h>
+#pragma warning(pop)
 
 namespace Quantum {
 
@@ -28,9 +32,8 @@ namespace Quantum {
 #define QT_CORE_CRITICAL(...) ::Quantum::Log::GetCoreLogger()->critical(__VA_ARGS__)
 
 // Client log macros
-#define QT_TRACE(...)	      ::Quantum::Log::GetClientLogger()->trace(__VA_ARGS__)
-#define QT_INFO(...)	      ::Quantum::Log::GetClientLogger()->info(__VA_ARGS__)
-#define QT_WARN(...)	      ::Quantum::Log::GetClientLogger()->warn(__VA_ARGS__)
-#define QT_ERROR(...)	      ::Quantum::Log::GetClientLogger()->error(__VA_ARGS__)
-#define QT_CRITICAL(...)	  ::Quantum::Log::GetClientLogger()->critical(__VA_ARGS__)
-
+#define QT_TRACE(...)         ::Quantum::Log::GetClientLogger()->trace(__VA_ARGS__)
+#define QT_INFO(...)          ::Quantum::Log::GetClientLogger()->info(__VA_ARGS__)
+#define QT_WARN(...)          ::Quantum::Log::GetClientLogger()->warn(__VA_ARGS__)
+#define QT_ERROR(...)         ::Quantum::Log::GetClientLogger()->error(__VA_ARGS__)
+#define QT_CRITICAL(...)      ::Quantum::Log::GetClientLogger()->critical(__VA_ARGS__)
