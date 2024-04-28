@@ -24,7 +24,7 @@ namespace Quantum {
 
 		m_ActiveScene = CreateRef<Scene>();
 
-#if 0
+
 		// Entity
 		auto square = m_ActiveScene->CreateEntity("Green Square");
 		square.AddComponent<SpriteRendererComponent>(glm::vec4{ 0.0f, 1.0f, 0.0f, 1.0f });
@@ -73,7 +73,7 @@ namespace Quantum {
 
 		m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
 		m_SecondCamera.AddComponent<NativeScriptComponent>().Bind<CameraController>();
-#endif
+
 
 		m_SceneHierarchyPanel.SetContext(m_ActiveScene);
 	}

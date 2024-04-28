@@ -23,12 +23,6 @@ project "yaml-cpp"
 		cppdialect "C++20"
 		staticruntime "on"
 
-	filter "system:linux"
-		pic "On"
-		systemversion "latest"
-		cppdialect "C++17"
-		staticruntime "off"
-
 	filter "configurations:Debug"
 		runtime "Debug"
 		symbols "on"
