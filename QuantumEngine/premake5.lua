@@ -4,8 +4,6 @@ project "QuantumEngine"
 	cppdialect "C++20"
 	staticruntime "on"
 
-	disablewarnings "4996"
-
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -37,9 +35,7 @@ project "QuantumEngine"
 		"%{IncludeDir.ImGui}",
 		"%{IncludeDir.glm}",
 		"%{IncludeDir.stb_image}",
-		"%{IncludeDir.entt}",
-		"%{IncludeDir.yaml_cpp}"
-
+		"%{IncludeDir.entt}"
 	}
 
 	links
@@ -47,7 +43,6 @@ project "QuantumEngine"
 		"GLFW",
 		"Glad",
 		"ImGui",
-		"yaml-cpp",
 		"opengl32.lib"
 	}
 

@@ -21,29 +21,22 @@ workspace "QuantumEngine"
 		"MultiProcessorCompile"
 	}
 
-	disablewarnings "4996"
-
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
-IncludeDir["GLFW"] = "%{wks.location}/QuantumEngine/vendor/GLFW/include"
-IncludeDir["Glad"] = "%{wks.location}/QuantumEngine/vendor/Glad/include"
-IncludeDir["ImGui"] = "%{wks.location}/QuantumEngine/vendor/imgui"
-IncludeDir["glm"] = "%{wks.location}/QuantumEngine/vendor/glm"
-IncludeDir["stb_image"] = "%{wks.location}/QuantumEngine/vendor/stb_image"
-IncludeDir["entt"] = "%{wks.location}/QuantumEngine/vendor/entt/include"
-IncludeDir["yaml_cpp"] = "%{wks.location}/QuantumEngine/vendor/yaml-cpp/include"
-
+IncludeDir["GLFW"] = "%{wks.location}/Hazel/vendor/GLFW/include"
+IncludeDir["Glad"] = "%{wks.location}/Hazel/vendor/Glad/include"
+IncludeDir["ImGui"] = "%{wks.location}/Hazel/vendor/imgui"
+IncludeDir["glm"] = "%{wks.location}/Hazel/vendor/glm"
+IncludeDir["stb_image"] = "%{wks.location}/Hazel/vendor/stb_image"
+IncludeDir["entt"] = "%{wks.location}/Hazel/vendor/entt/include"
 
 group "Dependencies"
 	include "vendor/premake"
-	include "QuantumEngine/vendor/GLFW"
-	include "QuantumEngine/vendor/Glad"
-	include "QuantumEngine/vendor/imgui"
-	include "QuantumEngine/vendor/yaml-cpp"
-
-
+	include "Hazel/vendor/GLFW"
+	include "Hazel/vendor/Glad"
+	include "Hazel/vendor/imgui"
 group ""
 
 include "QuantumEngine"

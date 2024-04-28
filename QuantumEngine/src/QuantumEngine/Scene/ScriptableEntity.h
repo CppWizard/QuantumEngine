@@ -1,6 +1,6 @@
 #pragma once
 
-#include "QuantumEngine/Scene/Entity.h"
+#include "Entity.h"
 
 namespace Quantum {
 
