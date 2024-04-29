@@ -61,7 +61,7 @@ namespace YAML {
 	};
 
 }
-namespace Hazel {
+namespace Quantum {
 
 	YAML::Emitter& operator<<(YAML::Emitter& out, const glm::vec3& v)
 	{
@@ -174,7 +174,7 @@ namespace Hazel {
 	void SceneSerializer::SerializeRuntime(const std::string& filepath)
 	{
 		// Not implemented
-		HZ_CORE_ASSERT(false);
+		QT_CORE_ASSERT(false);
 	}
 
 	bool SceneSerializer::Deserialize(const std::string& filepath)
@@ -188,7 +188,7 @@ namespace Hazel {
 			return false;
 
 		std::string sceneName = data["Scene"].as<std::string>();
-		HZ_CORE_TRACE("Deserializing scene '{0}'", sceneName);
+		QT_CORE_TRACE("Deserializing scene '{0}'", sceneName);
 
 		auto entities = data["Entities"];
 		if (entities)
@@ -202,7 +202,7 @@ namespace Hazel {
 				if (tagComponent)
 					name = tagComponent["Tag"].as<std::string>();
 
-				HZ_CORE_TRACE("Deserialized entity with ID = {0}, name = {1}", uuid, name);
+				QT_CORE_TRACE("Deserialized entity with ID = {0}, name = {1}", uuid, name);
 
 				Entity deserializedEntity = m_Scene->CreateEntity(name);
 
@@ -216,7 +216,7 @@ namespace Hazel {
 					tc.Scale = transformComponent["Scale"].as<glm::vec3>();
 				}
 
-				auto cameraComponent = entity["CameraComponent"];
+				const auto cameraComponent = entity["CameraComponent"];
 				if (cameraComponent)
 				{
 					auto& cc = deserializedEntity.AddComponent<CameraComponent>();
@@ -251,7 +251,7 @@ namespace Hazel {
 	bool SceneSerializer::DeserializeRuntime(const std::string& filepath)
 	{
 		// Not implemented
-		HZ_CORE_ASSERT(false);
+		QT_CORE_ASSERT(false);
 		return false;
 	}
 

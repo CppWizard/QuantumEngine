@@ -14,6 +14,4 @@
 [submodule "QuantumEngine/vendor/GLFW"]
 	path = QuantumEngine/vendor/GLFW
 	url = https://github.com/TheCherno/glfw.git
-[submodule "QuantumEngine/vendor/yaml-cpp"]
-	path = QuantumEngine/vendor/yaml-cpp
-	url = https://github.com/jbeder/yaml-cpp.git
+
