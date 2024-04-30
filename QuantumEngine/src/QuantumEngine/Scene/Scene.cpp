@@ -1,18 +1,17 @@
 #include "qtpch.h"
-#include "QuantumEngine/Scene/Scene.h"
+#include "Scene.h"
 
-#include "QuantumEngine/Scene/Components.h"
+#include "Components.h"
 #include "QuantumEngine/Renderer/Renderer2D.h"
 
 #include <glm/glm.hpp>
 
-#include "QuantumEngine/Scene/Entity.h"
+#include "Entity.h"
 
 namespace Quantum {
 
 	Scene::Scene()
 	{
-
 	}
 
 	Scene::~Scene()
@@ -44,7 +43,6 @@ namespace Quantum {
 					{
 						nsc.Instance = nsc.InstantiateScript();
 						nsc.Instance->m_Entity = Entity{ entity, this };
-
 						nsc.Instance->OnCreate();
 					}
 
@@ -134,5 +132,6 @@ namespace Quantum {
 	void Scene::OnComponentAdded<NativeScriptComponent>(Entity entity, NativeScriptComponent& component)
 	{
 	}
+
 
 }

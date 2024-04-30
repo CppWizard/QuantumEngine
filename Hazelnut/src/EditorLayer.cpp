@@ -4,6 +4,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#include "QuantumEngine/Scene/SceneSerializer.h"
+
 
 namespace Quantum {
 
@@ -74,7 +76,9 @@ namespace Quantum {
 		m_CameraEntity.AddComponent<NativeScriptComponent>().Bind<CameraController>();
 		m_SecondCamera.AddComponent<NativeScriptComponent>().Bind<CameraController>();
 
+
 		m_SceneHierarchyPanel.SetContext(m_ActiveScene);
+
 	}
 
 	void EditorLayer::OnDetach()
@@ -175,6 +179,17 @@ namespace Quantum {
 				// which we can't undo at the moment without finer window depth/z control.
 				//ImGui::MenuItem("Fullscreen", NULL, &opt_fullscreen_persistant);1
 
+				if (ImGui::MenuItem("Serialize"))
+				{
+					SceneSerializer serializer(m_ActiveScene);
+					serializer.Serialize("assets/scenes/Example.Quantum");
+				}
+
+				if (ImGui::MenuItem("Deserialize"))
+				{
+					SceneSerializer serializer(m_ActiveScene);
+					serializer.Deserialize("assets/scenes/Example.Quantum");
+				}
 				
 
 				if (ImGui::MenuItem("Exit")) Application::Get().Close();
