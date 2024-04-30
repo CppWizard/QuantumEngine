@@ -16,3 +16,6 @@
 	url = https://github.com/TheCherno/glfw.git
 
 
+[submodule "QuantumEngine/vendor/yaml-cpp"]
+	path = QuantumEngine/vendor/yaml-cpp
+	url = https://github.com/TheCherno/yaml-cpp.git
