@@ -34,6 +34,9 @@
     <Filter Include="src\QuantumEngine\Scene">
       <UniqueIdentifier>{DA5A96C7-4692-DE5E-4F9C-4282BB520558}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\QuantumEngine\Utils">
+      <UniqueIdentifier>{1DEFC3C7-8926-0C5F-9230-7082FEE63258}</UniqueIdentifier>
+    </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
     </Filter>
@@ -200,6 +203,9 @@
     </ClInclude>
     <ClInclude Include="src\QuantumEngine\Scene\ScriptableEntity.h">
       <Filter>src\QuantumEngine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Utils\PlatformUtils.h">
+      <Filter>src\QuantumEngine\Utils</Filter>
     </ClInclude>
     <ClInclude Include="src\qtpch.h">
       <Filter>src</Filter>
@@ -1479,6 +1485,9 @@
       <Filter>src\Platform\OpenGL</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsInput.cpp">
+      <Filter>src\Platform\Windows</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsPlatformUtils.cpp">
       <Filter>src\Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
