@@ -19,7 +19,8 @@ project "Hazelnut"
 		"%{wks.location}/QuantumEngine/src",
 		"%{wks.location}/QuantumEngine/vendor",
 		"%{IncludeDir.glm}",
-		"%{IncludeDir.entt}"
+		"%{IncludeDir.entt}",
+		"%{IncludeDir.ImGuizmo}"
 	}
 
 	links

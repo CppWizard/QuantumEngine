@@ -28,6 +28,9 @@
     <Filter Include="src\QuantumEngine\ImGui">
       <UniqueIdentifier>{E762E6C6-539A-2E5E-5CA4-9281C85A5557}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\QuantumEngine\Math">
+      <UniqueIdentifier>{F60E47FE-E208-7050-CB75-0661B70ED6BC}</UniqueIdentifier>
+    </Filter>
     <Filter Include="src\QuantumEngine\Renderer">
       <UniqueIdentifier>{43B4A59B-2FC4-516C-987D-B68A84AC4005}</UniqueIdentifier>
     </Filter>
@@ -39,6 +42,9 @@
     </Filter>
     <Filter Include="vendor">
       <UniqueIdentifier>{B3738122-9F15-ACF8-88D0-BF4C74113349}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="vendor\ImGuizmo">
+      <UniqueIdentifier>{73BF7F4C-DF4A-ED10-E85B-700554664911}</UniqueIdentifier>
     </Filter>
     <Filter Include="vendor\glm">
       <UniqueIdentifier>{829FC5A8-6E57-07F6-D75E-E051C335A2E6}</UniqueIdentifier>
@@ -147,6 +153,9 @@
     <ClInclude Include="src\QuantumEngine\ImGui\ImGuiLayer.h">
       <Filter>src\QuantumEngine\ImGui</Filter>
     </ClInclude>
+    <ClInclude Include="src\QuantumEngine\Math\Math.h">
+      <Filter>src\QuantumEngine\Math</Filter>
+    </ClInclude>
     <ClInclude Include="src\QuantumEngine\Renderer\Buffer.h">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClInclude>
@@ -209,6 +218,9 @@
     </ClInclude>
     <ClInclude Include="src\qtpch.h">
       <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="vendor\ImGuizmo\ImGuizmo.h">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClInclude>
     <ClInclude Include="vendor\glm\glm\common.hpp">
       <Filter>vendor\glm\glm</Filter>
@@ -1514,6 +1526,9 @@
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp">
       <Filter>src\QuantumEngine\ImGui</Filter>
     </ClCompile>
+    <ClCompile Include="src\QuantumEngine\Math\Math.cpp">
+      <Filter>src\QuantumEngine\Math</Filter>
+    </ClCompile>
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp">
       <Filter>src\QuantumEngine\Renderer</Filter>
     </ClCompile>
@@ -1564,6 +1579,9 @@
     </ClCompile>
     <ClCompile Include="src\qtpch.cpp">
       <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="vendor\ImGuizmo\ImGuizmo.cpp">
+      <Filter>vendor\ImGuizmo</Filter>
     </ClCompile>
     <ClCompile Include="vendor\stb_image\stb_image.cpp">
       <Filter>vendor\stb_image</Filter>
