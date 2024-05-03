@@ -3,6 +3,8 @@
 #include "Quantum.h"
 #include "Panels/SceneHierarchyPanel.h"
 
+#include "QuantumEngine/Renderer/EditorCamera.h"
+
 
 namespace Quantum {
 
@@ -38,6 +40,8 @@ namespace Quantum {
 		Entity m_SecondCamera;
 
 		bool m_PrimaryCamera = true;
+
+		EditorCamera m_EditorCamera;
 
 		Ref<Texture2D> m_CheckerboardTexture;
 

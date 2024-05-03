@@ -181,6 +181,7 @@
     <ClInclude Include="src\QuantumEngine\Math\Math.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\Buffer.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\Camera.h" />
+    <ClInclude Include="src\QuantumEngine\Renderer\EditorCamera.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\Framebuffer.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\GraphicsContext.h" />
     <ClInclude Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.h" />
@@ -639,6 +640,7 @@
     <ClCompile Include="src\QuantumEngine\ImGui\ImGuiLayer.cpp" />
     <ClCompile Include="src\QuantumEngine\Math\Math.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\Buffer.cpp" />
+    <ClCompile Include="src\QuantumEngine\Renderer\EditorCamera.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\Framebuffer.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\GraphicsContext.cpp" />
     <ClCompile Include="src\QuantumEngine\Renderer\OrthoGraphicCamera.cpp" />
